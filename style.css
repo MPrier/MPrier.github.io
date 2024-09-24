@@ -1,0 +1,263 @@
+.dropDown {
+    height: 50px;
+    width: 100%;
+    background-color: #faf9f6 ;
+}
+
+.header {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: faf9f6;
+    overflow: hidden;
+    display: block;
+    border-radius: 15px;
+    transition: height 0.5s ease-in;
+}
+
+.header:hover {
+    /* transform: scale(1.05);
+    border-radius: 15px;  */
+    height: 300px;
+    transition: height 0.5s ease-in;
+    border-radius: 15px;
+    display: flex;
+    background: black;
+    
+}
+
+h2 {
+    display: none;
+    position: absolute;
+    color: #f3f3eb;
+    text-align: center;
+    /* top: 150px; */
+    font-size: xx-large;
+    z-index: 5;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 260px;
+    font-size: large;
+    pointer-events: none;
+    
+    /* animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s; */
+}
+
+.header:hover h2 {
+    display: inline;
+    /* color: rgb(255, 255, 255); */
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.header:hover h1 {
+    font-size: 50px;
+    /* animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s; */
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.header .pic {
+    display: inline-block;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    z-index: 99;
+    /* margin-top: 13px;
+    margin-left: 13px; */
+    background-image: url('P.jfif');
+    /* content: url("Vlad.jfif"); */
+    /* left: 44%; */
+    /* border: 1px solid black; */
+    
+}
+
+.about .pic {
+    display: inline-block;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    
+    /* border-radius: 50%; */
+    background-color: rgb(255, 255, 255);
+    z-index: 99;
+    /* margin-top: 13px;
+    margin-left: 13px; */
+    background-image: url('P.jfif');
+    /* content: url("Vlad.jfif"); */
+    /* left: 44%; */
+    border: 1px solid black;
+    margin-top: 35px;
+    margin-left: 20px;
+    
+}
+
+body {
+    background-color: #f3f3eb;
+    /* background-color: rgb(255, 231, 235); */
+    /* background-image: url("cool-background (1).png"); */
+    /* background-size: cover; */
+    /* background-image: url('boston.jfif'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* height: 100%;
+    width: 100%; */
+    
+}
+ 
+
+.header #canvasParent {
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+}
+
+canvas {
+    background: black;
+    height: inherit;
+}
+
+.projects {
+    /* background: purple; */
+    width: 100%;
+    height: 300px;
+    margin-top: 25px;
+
+}
+
+.about {
+    width: 100%;
+    height: 300px;
+    margin-top: 25px;
+    display: flex;
+}
+
+#name {
+    position: absolute;
+    color: white;
+    top: 150px;
+    font-size: xx-large;
+    z-index: 1;
+    left: 45%;
+    text-align: center;
+
+}
+
+h1 {
+    position: absolute;
+    color: #f3f3eb;
+    text-align: center;
+    /* top: 150px; */
+    font-size: xx-large;
+    z-index: 1;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 150px;
+    pointer-events: none;
+    transition: font-size 0.5s ease-in;
+}
+
+#project-title {
+    position: absolute;
+    color: white;
+    text-align:left;
+    /* top: 150px; */
+    font-size: xx-large;
+    z-index: 1;
+    width: 100%;
+    vertical-align: middle;
+    /* line-height: 150px; */
+    /* pointer-events: none; */
+}
+
+.project-box {
+    box-shadow: 1px 1px 10px #999;
+    /* margin: 2px;
+    margin-top: 15px; */
+    margin-top: 15px;
+    margin-right: 15px;
+    
+    /* cursor: pointer; */
+    /* display:inline-block;
+    display:inline;For IE7 */
+    /* zoom:1;For IE7 */
+    /* vertical-align:top; */
+    min-width: 400px;
+    height: 250px;
+    
+    background-color: rgb(247, 247, 234);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    color: black;
+    position: relative;
+    font-size: xx-large;
+}
+
+.project-box-container {
+    /* background: green; */
+    height: inherit;
+    display: flex;
+    overflow-x: auto;
+    
+}
+
+.project-box-container.active {
+    cursor: grabbing;
+    cursor: -webkit-grab;
+    transform: scale(1.1);
+}
+
+.project-box-container::-webkit-scrollbar {
+    width: 0;
+    /* height: 100px; */
+}
+
+.project-box-text {
+    pointer-events: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.about-title {
+    font-size: 42px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Inter';
+}
