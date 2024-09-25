@@ -6,11 +6,23 @@ class Particle {
         this.speedY = Math.random() * 5 - 2.5;
         this.size = Math.max(25,Math.random() * 50);
     }
-    draw(){
-        ctx.fillStyle = '#f3f3eb';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
+    draw(red){
+        if (red != undefined) {
+            ctx.fillStyle = "red";
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        else {
+            ctx.fillStyle = '#f3f3eb';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        // ctx.beginPath();
+        // ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        // ctx.fill();
     }
     update(){
         this.x += this.speedX;
@@ -95,7 +107,8 @@ canvas.addEventListener('click', function(event){
     let circle = new Particle();
     circle.x = event.x;
     circle.y = event.y;
-    circle.draw();
+    let red = 'red'
+    circle.draw(red);
     particleObjects.push(circle);
 })
 
