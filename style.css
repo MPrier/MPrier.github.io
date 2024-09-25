@@ -11,7 +11,7 @@
     background-color: faf9f6;
     overflow: hidden;
     display: block;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     transition: height 0.5s ease-in;
     
 
@@ -22,7 +22,7 @@
     border-radius: 15px;  */
     height: 300px;
     transition: height 0.5s ease-in;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     display: flex;
     background: black;
     
@@ -105,7 +105,7 @@ h2 {
 .about .pic {
     display: inline-block;
     position: relative;
-    min-width: 250px;
+    /* min-width: 250px; */
     height: 250px;
     
     /* border-radius: 50%; */
@@ -124,12 +124,15 @@ h2 {
 
 body {
     background-color: #f3f3eb;
+    width: 100%;
+    margin: 0;
     /* background-color: rgb(255, 231, 235); */
     /* background-image: url("cool-background (1).png"); */
     /* background-size: cover; */
     /* background-image: url('boston.jfif'); */
-    background-repeat: no-repeat;
-    background-size: 100%;
+    /* background-repeat: no-repeat;
+    background-size: 100%; */
+    overflow-x: hidden;
     /* height: 100%;
     width: 100%; */
     
@@ -155,7 +158,7 @@ canvas {
 .projects {
     /* background: purple; */
     width: 100%;
-    height: 1000px;
+    /* height: 1000px; */
     /* margin-top: 25px; */
     /* margin: 15px; */
 
@@ -407,5 +410,33 @@ h1 {
     margin-left: auto;
     text-align: left;
     /* box-shadow: 1px 1px 10px #999; */
+    
+}
+
+.bottom-contact-bar {
+    bottom: 0;
+    background-color: black;
+    /* border-radius: 20px; */
+    width: 100%;
+    height: 40px;
+    /* padding-top: 15px; */
+    overflow: hidden;
+    
+}
+
+.contact {
+    display: block;
+    bottom: 0;
+    height: 100%;
+    color: white;
+    font-size: large;
+    margin-left: 15px;
+    width: 5%;
+    text-align: center;
+    line-height: 40px;
+
+    
+    
+    /* text-align: center; */
     
 }
